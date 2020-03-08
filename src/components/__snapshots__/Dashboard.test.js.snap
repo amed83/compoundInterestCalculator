@@ -7,25 +7,18 @@ exports[`Dashboard  <Dashboard> should render correctly  1`] = `
     1
   </styled.p>
   <Styled(WithStyles(ForwardRef(Container))) classes={{...}}>
-    <WithStyles(ForwardRef(Typography)) id=\\"discrete-slider-always\\" gutterBottom={true}>
+    <styled.h3 id=\\"discrete-slider-always\\" gutterBottom={true}>
       Months
-    </WithStyles(ForwardRef(Typography))>
-    <Styled(WithStyles(ForwardRef(Slider))) classes={{...}} data-test=\\"slider\\" aria-labelledby=\\"discrete-slider-always\\" getAriaValueText={[Function: valuetext]} defaultValue={1} onChange={[Function: onChange]} step={1} min={1} max={48} valueLabelDisplay=\\"on\\" />
+    </styled.h3>
+    <Styled(WithStyles(ForwardRef(Slider))) classes={{...}} data-test=\\"slider\\" aria-labelledby=\\"discrete-slider-always\\" getAriaValueText={[Function: valuetext]} defaultValue={1} onChange={[Function: onChange]} step={1} min={1} max={48} valueLabelDisplay=\\"on\\" marks={{...}} />
   </Styled(WithStyles(ForwardRef(Container)))>
-  <WithStyles(ForwardRef(Typography)) variant=\\"h5\\">
-    Total:
-    <span style={{...}} data-test=\\"total\\">
-      £
-      1
-    </span>
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Typography)) variant=\\"h6\\">
-    Monthly Payment:
-    <span style={{...}}>
-      £
-      1.0
-    </span>
-     
-  </WithStyles(ForwardRef(Typography))>
+  <styled.h2>
+    Total: £
+    1
+  </styled.h2>
+  <styled.h3>
+    Monthly Payment: £
+    1.0
+  </styled.h3>
 </Styled(WithStyles(ForwardRef(Container)))>"
 `;

@@ -7,10 +7,32 @@ import {
   StyledContainer,
   StyledSliderContainer,
   StyledSlider,
-  StyledErrorText
+  StyledErrorText,
+  StyledTotal,
+  StyledSliderTitle,
+  StyledMonthlyRepay
 } from "./styles";
 
 import { calculateWithCompoundInterest } from "../utils/compoundFormula/compoundFormula";
+
+const marks = [
+  {
+    value: 12,
+    label: "1 Year"
+  },
+  {
+    value: 24,
+    label: "2 Years"
+  },
+  {
+    value: 36,
+    label: "3 Years"
+  },
+  {
+    value: 48,
+    label: "4 Years"
+  }
+];
 
 const Dashboard = () => {
   const [months, setMonths] = React.useState(1);
@@ -71,9 +93,9 @@ const Dashboard = () => {
       <StyledErrorText data-test={"error"}>{error}</StyledErrorText>
 
       <StyledSliderContainer classes={{ root: "root-class" }}>
-        <Typography id="discrete-slider-always" gutterBottom>
+        <StyledSliderTitle id="discrete-slider-always" gutterBottom>
           Months
-        </Typography>
+        </StyledSliderTitle>
 
         <StyledSlider
           classes={{ root: "root-class" }}
@@ -86,20 +108,13 @@ const Dashboard = () => {
           min={1}
           max={48}
           valueLabelDisplay="on"
+          marks={marks}
         />
       </StyledSliderContainer>
-      <Typography variant="h5">
-        Total:
-        <span style={{ fontWeight: "bold" }} data-test="total">
-          £{total}
-        </span>
-      </Typography>
-      <Typography variant="h6">
-        Monthly Payment:
-        <span style={{ fontWeight: "bold" }}>
-          £{monthlyPayment ? monthlyPayment.toFixed(1) : 0}
-        </span>{" "}
-      </Typography>
+      <StyledTotal>Total: £{total}</StyledTotal>
+      <StyledMonthlyRepay>
+        Monthly Payment: £{monthlyPayment ? monthlyPayment.toFixed(1) : 0}
+      </StyledMonthlyRepay>
     </StyledContainer>
   );
 };
