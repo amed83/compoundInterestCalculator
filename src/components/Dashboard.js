@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-
-import Typography from "@material-ui/core/Typography";
+import { SLIDER_MARKS } from "../constants/constants";
 import { errorMessages } from "../utils/errorMessages";
 import {
   StyledInput,
@@ -14,25 +13,6 @@ import {
 } from "./styles";
 
 import { calculateWithCompoundInterest } from "../utils/compoundFormula/compoundFormula";
-
-const marks = [
-  {
-    value: 12,
-    label: "1 Year"
-  },
-  {
-    value: 24,
-    label: "2 Years"
-  },
-  {
-    value: 36,
-    label: "3 Years"
-  },
-  {
-    value: 48,
-    label: "4 Years"
-  }
-];
 
 const Dashboard = () => {
   const [months, setMonths] = React.useState(1);
@@ -108,7 +88,7 @@ const Dashboard = () => {
           min={1}
           max={48}
           valueLabelDisplay="on"
-          marks={marks}
+          marks={SLIDER_MARKS}
         />
       </StyledSliderContainer>
       <StyledTotal>Total: £{total}</StyledTotal>
