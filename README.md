@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+This is a calculator for compound interests. At the moment the interest rate
+is fixed at 1% and it is calculated monthly because I'm building this app
+as a part of a job selection process, and this parameters are part of the assignment.
+I will then add the possibility for the user to insert and change  the interest rates and
+the frequency calculation.
+
 ## Available Scripts
 
 In the project directory, you can run:
